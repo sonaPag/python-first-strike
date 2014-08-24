@@ -74,7 +74,7 @@ class Test(unittest.TestCase):
         self.assertTrue(check_email('user","name@domain.com'))
     def test_name_symbol2_false(self):
         # "," rule
-        self.assertFalse(check_email('user,name@domain.com'))
+        self.assertFalse(check_email('user",name@domain.com'))
     def test_name_symbol3_check(self):
         # ":" rule
         self.assertTrue(check_email('us":"ername@domain.com'))
