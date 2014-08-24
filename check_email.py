@@ -18,7 +18,7 @@ def check_email(email):
     name  = my_email[0]
     domains = my_email[1]
 
-    if re.search(r'^-|[^a-zA-Z0-9\_\-\.]|-\.|\.-|.{257}|\s|^.{0,2}$|-$', domains) is not None:
+    if re.search(r'^-|^\.|[^a-zA-Z0-9\_\-\.]|(\.\.)|-\.|\.-|.{257}|\s|^.{0,2}$|-$|\.$', domains) is not None:
         return False
 
     if re.search(r'\.', domains) is None:
